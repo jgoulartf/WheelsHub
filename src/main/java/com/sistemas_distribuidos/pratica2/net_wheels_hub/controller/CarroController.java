@@ -1,6 +1,8 @@
 package com.sistemas_distribuidos.pratica2.net_wheels_hub.controller;
 
 import com.sistemas_distribuidos.pratica2.net_wheels_hub.model.Carro;
+import com.sistemas_distribuidos.pratica2.net_wheels_hub.model.Cliente;
+import com.sistemas_distribuidos.pratica2.net_wheels_hub.model.Funcionario;
 import com.sistemas_distribuidos.pratica2.net_wheels_hub.service.CarroService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +40,8 @@ public class CarroController {
     @PutMapping("/{id}")
     public ResponseEntity<Carro> updateCarro (
             @PathVariable UUID id,
-            @RequestBody @Valid Carro updatedCarro) {
+            @RequestBody @Valid Carro updatedCarro)
+    {
         return service.updateCarro(id, updatedCarro);
     }
 
@@ -47,4 +50,11 @@ public class CarroController {
         return service.deleteCarroById(id);
     }
 
+    @PostMapping("/compraCarro/{id}")
+    public ResponseEntity<String> compraCarroById(@PathVariable UUID id) {
+        System.out.println("Depurando");
+        return service.compraCarroById(id);
+    }
+
 }
+

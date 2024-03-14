@@ -1,5 +1,7 @@
 package com.sistemas_distribuidos.pratica2.net_wheels_hub.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonTypeId;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -15,6 +17,7 @@ import java.util.UUID;
 public class Funcionario {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @NotBlank
@@ -37,7 +40,7 @@ public class Funcionario {
     @NotEmpty
     private Double salario;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private List<Carro> carrosVendidos;
+//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "carrosVendidos")
+//    private List<Carro> carrosVendidos;
 
 }

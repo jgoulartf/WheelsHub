@@ -11,5 +11,5 @@ public class NetWheelsHubApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NetWheelsHubApplication.class, args);
 	}
-
+	
 }
