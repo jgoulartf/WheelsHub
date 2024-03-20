@@ -13,6 +13,13 @@ import java.util.UUID;
 @Data
 @Table(name = "carro")
 public class Carro {
+    
+    public enum Categorias{
+        BASICO,
+        INTERMEDIARIO,
+        EXECUTIVO
+    }
+    
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -41,4 +48,10 @@ public class Carro {
     @NotNull
     @NotEmpty
     private Double preco;
+
+    @NotBlank
+    @NotNull
+    @NotEmpty
+    private Categorias categoria;
+
 }
