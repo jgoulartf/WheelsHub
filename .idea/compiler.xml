@@ -9,16 +9,20 @@
         <outputRelativeToContentRoot value="true" />
         <module name="WheelsHubServiceRegistry" />
         <module name="WheelsHubAuthService" />
-        <module name="WheelsHubService3" />
+        <module name="WheelsHubDataService1" />
+        <module name="WheelsHubDataService0" />
+        <module name="WheelsHubDataService3" />
         <module name="WheelsHubGateway" />
-        <module name="WheelsHubService2" />
-        <module name="WheelsHubService1" />
-        <module name="WheelsHubService0" />
+        <module name="WheelsHubDataService2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="NetWheelsHub" target="17" />
       <module name="NetWheelsHub (2)" target="17" />
+      <module name="WheelsHubService0" target="17" />
+      <module name="WheelsHubService1" target="17" />
+      <module name="WheelsHubService2" target="17" />
+      <module name="WheelsHubService3" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -26,6 +30,10 @@
       <module name="NetWheelsHub" options="-parameters" />
       <module name="NetWheelsHub (2)" options="-parameters" />
       <module name="WheelsHubAuthService" options="-parameters" />
+      <module name="WheelsHubDataService0" options="-parameters" />
+      <module name="WheelsHubDataService1" options="-parameters" />
+      <module name="WheelsHubDataService2" options="-parameters" />
+      <module name="WheelsHubDataService3" options="-parameters" />
       <module name="WheelsHubGateway" options="-parameters" />
       <module name="WheelsHubService0" options="-parameters" />
       <module name="WheelsHubService1" options="-parameters" />

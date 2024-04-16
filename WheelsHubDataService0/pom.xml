@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sistemas_distribuidos.pratica2.</groupId>
-	<artifactId>WheelsHubService0</artifactId>
+	<artifactId>WheelsHubDataService0</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>WheelsHubDatService0</name>
-	<description>WheelsHubDatService0</description>
+	<name>WheelsHubDataService0</name>
+	<description>WheelsHubDataService0</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

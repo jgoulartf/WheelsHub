@@ -21,7 +21,6 @@ public class Carro {
     }
     
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @NotBlank

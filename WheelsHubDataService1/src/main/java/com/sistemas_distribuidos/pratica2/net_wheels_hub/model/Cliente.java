@@ -15,7 +15,6 @@ import java.util.UUID;
 @Table(name = "cliente")
 public class Cliente {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private UUID id;
 

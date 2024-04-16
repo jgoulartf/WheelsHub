@@ -7,6 +7,7 @@ import com.sistemas_distribuidos.pratica2.net_wheels_hub.service.ReplyDataServic
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +18,7 @@ import java.util.UUID;
 @RequestMapping("/api/carros")
 public class CarroController {
     private final CarroService service;
+    private ReplyDataService<Carro> replyService = new ReplyDataService<Carro>();
 
     @Autowired
     public CarroController(CarroService service) {
@@ -26,11 +28,17 @@ public class CarroController {
     @PostMapping
     public ResponseEntity<Carro> createCarro(@RequestBody Carro carro) throws Exception {
 
-        ReplyDataService<Carro> replyService = new ReplyDataService<Carro>();
+        ResponseEntity<Carro> responseEntityNewCarro = service.createCarro(carro);
+        Carro newCarro = responseEntityNewCarro.getBody();
 
-        replyService.replyCreateData(carro);
+        try {
+            this.replyService.replyCreateData(newCarro);
+        }
+        catch (RuntimeException e){
+            throw new RuntimeException(e);
+        }
 
-        return service.createCarro(carro);
+        return responseEntityNewCarro;
     }
     @GetMapping
     public ResponseEntity<List<Carro>> getAllCarros(){
@@ -52,11 +60,23 @@ public class CarroController {
             @PathVariable UUID id,
             @RequestBody @Valid Carro updatedCarro)
     {
+        try {
+            this.replyService.replyUpdateData(id, updatedCarro);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         return service.updateCarro(id, updatedCarro);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteCarroById(@PathVariable UUID id) {
+
+        try {
+            this.replyService.replyDeleteData(id);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
         return service.deleteCarroById(id);
     }
 
@@ -65,6 +85,12 @@ public class CarroController {
             @PathVariable UUID id,
             @RequestBody @Valid CompraRequest compraRequest
     ) {
+        try {
+            this.replyService.replyBuyCarData(id, );
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
         return service.compraCarroById(id, compraRequest.getIdCliente(), compraRequest.getIdFuncionario());
     }
 

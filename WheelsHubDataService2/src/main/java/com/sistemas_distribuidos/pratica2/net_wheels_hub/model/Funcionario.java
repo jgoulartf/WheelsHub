@@ -17,7 +17,6 @@ import java.util.UUID;
 public class Funcionario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @NotBlank
