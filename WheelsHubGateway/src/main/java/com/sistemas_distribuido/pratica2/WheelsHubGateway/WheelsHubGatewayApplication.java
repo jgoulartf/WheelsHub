@@ -18,14 +18,9 @@ public class WheelsHubGatewayApplication {
 	public RouteLocator routes(RouteLocatorBuilder builder){
 		return builder.
 				routes()
-	//				.route(r -> r.path("/api/carros/**").uri("lb://WheelsHubAuthService"))
-					.route(r -> r.path("/api/carros/**").uri("lb://WheelsHubDataService"))
-					.route(r -> r.path("/api/clientes/**").uri("lb://WheelsHubDataService"))
-					.route(r -> r.path("/api/funcionarios/**").uri("lb://WheelsHubDataService"))
-	//				.route(r -> r.path("/votingSession/VotingSession/**").uri("lb://msVotingSession"))
-	//				.route(r -> r.path("/votingSession/Votes/**").uri("lb://msVotingSession"))
+					.route(r -> r.path("/api/carros/**").uri("lb://WheelsHubDataService0"))
+					.route(r -> r.path("/api/clientes/**").uri("lb://WheelsHubDataService0"))
+					.route(r -> r.path("/api/funcionarios/**").uri("lb://WheelsHubDataService0"))
 				.build();
 	}
-
-
 }

@@ -9,16 +9,28 @@
         <outputRelativeToContentRoot value="true" />
         <module name="WheelsHubServiceRegistry" />
         <module name="WheelsHubAuthService" />
-        <module name="NetWheelsHub" />
+        <module name="WheelsHubService3" />
         <module name="WheelsHubGateway" />
+        <module name="WheelsHubService2" />
+        <module name="WheelsHubService1" />
+        <module name="WheelsHubService0" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="NetWheelsHub" target="17" />
+      <module name="NetWheelsHub (2)" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="NetWheelsHub" options="-parameters" />
+      <module name="NetWheelsHub (2)" options="-parameters" />
       <module name="WheelsHubAuthService" options="-parameters" />
       <module name="WheelsHubGateway" options="-parameters" />
+      <module name="WheelsHubService0" options="-parameters" />
+      <module name="WheelsHubService1" options="-parameters" />
+      <module name="WheelsHubService2" options="-parameters" />
+      <module name="WheelsHubService3" options="-parameters" />
       <module name="WheelsHubServiceRegistry" options="-parameters" />
     </option>
   </component>

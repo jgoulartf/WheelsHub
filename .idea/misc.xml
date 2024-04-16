@@ -6,11 +6,15 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/WheelsHubAuthService/pom.xml" />
-        <option value="$PROJECT_DIR$/WheelsHubDataService/pom.xml" />
         <option value="$PROJECT_DIR$/WheelsHubGateway/pom.xml" />
         <option value="$PROJECT_DIR$/WheelsHubServiceRegistry/pom.xml" />
+        <option value="$PROJECT_DIR$/WheelsHubDataService2/pom.xml" />
+        <option value="$PROJECT_DIR$/WheelsHubDataService3/pom.xml" />
+        <option value="$PROJECT_DIR$/WheelsHubDataService0/pom.xml" />
+        <option value="$PROJECT_DIR$/WheelsHubDataService1/pom.xml" />
       </list>
     </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
 </project>

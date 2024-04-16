@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="DB_net_wheels_rub@ep-crimson-wildflower-a5jpduub.us-east-2.aws.neon.tech" uuid="a230c61f-a9d1-4fc9-87e7-f175975b851b">
+    <data-source source="LOCAL" name="WheelsHubDatabase1@ep-holy-wildflower-a5zev7kv.us-east-2.aws.neon.tech" uuid="f548e4c1-4596-482d-a7f7-bdb779a8193b">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://ep-crimson-wildflower-a5jpduub.us-east-2.aws.neon.tech/DB_net_wheels_rub?sslmode=require</jdbc-url>
+      <jdbc-url>jdbc:postgresql://ep-holy-wildflower-a5zev7kv.us-east-2.aws.neon.tech/WheelsHubDatabase1?sslmode=require</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
+        <property name="com.intellij.clouds.kubernetes.db.resource.type" value="Deployment" />
+        <property name="com.intellij.clouds.kubernetes.db.container.port" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="WheelsHubDatabase3@ep-little-fire-a5jt40l6.us-east-2.aws.neon.tech" uuid="453cc631-76fc-427a-ac15-3f6388e18ea9">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ep-little-fire-a5jt40l6.us-east-2.aws.neon.tech/WheelsHubDatabase3?sslmode=require</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="com.intellij.clouds.kubernetes.db.host.port" />
+        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
+        <property name="com.intellij.clouds.kubernetes.db.resource.type" value="Deployment" />
+        <property name="com.intellij.clouds.kubernetes.db.container.port" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="WheelsHubDatabase2@ep-frosty-king-a5lzvqfo.us-east-2.aws.neon.tech" uuid="bf368107-b614-418c-abf9-07ce0573e896">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ep-frosty-king-a5lzvqfo.us-east-2.aws.neon.tech/WheelsHubDatabase2?sslmode=require</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="com.intellij.clouds.kubernetes.db.host.port" />
+        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
+        <property name="com.intellij.clouds.kubernetes.db.container.port" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="WheelsHubDatabase0@ep-crimson-wildflower-a5jpduub.us-east-2.aws.neon.tech" uuid="12efc7ca-09b6-4ae5-a228-9847a658b181">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ep-crimson-wildflower-a5jpduub.us-east-2.aws.neon.tech/WheelsHubDatabase0?sslmode=require</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="com.intellij.clouds.kubernetes.db.host.port" />
+        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
+        <property name="com.intellij.clouds.kubernetes.db.resource.type" value="Deployment" />
         <property name="com.intellij.clouds.kubernetes.db.container.port" />
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
