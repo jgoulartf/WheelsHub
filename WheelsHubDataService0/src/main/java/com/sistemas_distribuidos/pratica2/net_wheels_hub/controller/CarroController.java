@@ -2,12 +2,11 @@ package com.sistemas_distribuidos.pratica2.net_wheels_hub.controller;
 
 import com.sistemas_distribuidos.pratica2.net_wheels_hub.model.Carro;
 import com.sistemas_distribuidos.pratica2.net_wheels_hub.service.CarroService;
-import com.sistemas_distribuidos.pratica2.net_wheels_hub.service.CompraRequest;
+import com.sistemas_distribuidos.pratica2.net_wheels_hub.dto.CompraCarroDTO;
 import com.sistemas_distribuidos.pratica2.net_wheels_hub.service.ReplyDataService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +17,8 @@ import java.util.UUID;
 @RequestMapping("/api/carros")
 public class CarroController {
     private final CarroService service;
-    private ReplyDataService<Carro> replyService = new ReplyDataService<Carro>();
+    private ReplyDataService<Carro> replyCRUDService = new ReplyDataService<>("/carros");
+    private ReplyDataService<CompraCarroDTO> replyBuyCarService = new ReplyDataService<>("/carros");
 
     @Autowired
     public CarroController(CarroService service) {
@@ -32,7 +32,7 @@ public class CarroController {
         Carro newCarro = responseEntityNewCarro.getBody();
 
         try {
-            this.replyService.replyCreateData(newCarro);
+            this.replyCRUDService.replyCreateData(newCarro);
         }
         catch (RuntimeException e){
             throw new RuntimeException(e);
@@ -61,7 +61,7 @@ public class CarroController {
             @RequestBody @Valid Carro updatedCarro)
     {
         try {
-            this.replyService.replyUpdateData(id, updatedCarro);
+            this.replyCRUDService.replyUpdateData(id, updatedCarro);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -72,7 +72,7 @@ public class CarroController {
     public ResponseEntity<String> deleteCarroById(@PathVariable UUID id) {
 
         try {
-            this.replyService.replyDeleteData(id);
+            this.replyCRUDService.replyDeleteData(id);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -80,19 +80,23 @@ public class CarroController {
         return service.deleteCarroById(id);
     }
 
+
+    // TODO: Testar após fazer o reply das outras entidades funcionário
     @PostMapping("/compraCarro/{id}")
     public ResponseEntity<String> compraCarroById(
             @PathVariable UUID id,
-            @RequestBody @Valid CompraRequest compraRequest
+            @RequestBody @Valid CompraCarroDTO compraRequest
     ) {
+        System.out.println("para");
+        ResponseEntity<String> responseEntityCompraCarro = service.compraCarroById(id, compraRequest.getIdCliente(), compraRequest.getIdFuncionario());
+
         try {
-            this.replyService.replyBuyCarData(id, );
+            this.replyBuyCarService.replyBuyCarData(id, compraRequest);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
-        return service.compraCarroById(id, compraRequest.getIdCliente(), compraRequest.getIdFuncionario());
+        return responseEntityCompraCarro;
     }
-
 }
 

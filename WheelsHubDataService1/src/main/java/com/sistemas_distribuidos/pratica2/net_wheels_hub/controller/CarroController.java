@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.TimeoutException;
 
 @RestController
 @RequestMapping("/api/carros")
@@ -24,7 +25,10 @@ public class CarroController {
     }
 
     @PostMapping
-    public ResponseEntity<Carro> createCarro(@RequestBody Carro carro) {
+    public ResponseEntity<Carro> createCarro(@RequestBody Carro carro) throws InterruptedException {
+
+        Thread.sleep(6000);
+
         return service.createCarro(carro);
     }
 

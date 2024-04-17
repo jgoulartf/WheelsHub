@@ -95,6 +95,7 @@ public class CarroService {
                     quantidadeCarroDisponivel.set(carro.getQuantidadeDisponivel());
                     carroRepository.save(carro);
                     vendido.set(carro.getNome());
+
                     // Funcionario vende carro
                     funcionarioRepository.findById(idFuncionario)
                             .ifPresent(funcionario -> {

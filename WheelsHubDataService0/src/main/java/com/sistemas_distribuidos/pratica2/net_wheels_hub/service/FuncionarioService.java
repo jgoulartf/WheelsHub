@@ -56,9 +56,9 @@ public class FuncionarioService {
     public ResponseEntity<String> deleteFuncionarioById(UUID id) {
         if (funcionarioRepository.existsById(id)) {
             funcionarioRepository.deleteById(id);
-            return new ResponseEntity<>("Cliente deletado com sucesso", HttpStatus.OK);
+            return new ResponseEntity<>("Funcionario deletado com sucesso", HttpStatus.OK);
         } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente não encontrado");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Funcionario não encontrado");
         }
 
     }

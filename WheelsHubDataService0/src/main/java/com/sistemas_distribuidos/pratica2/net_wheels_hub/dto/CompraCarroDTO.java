@@ -1,8 +1,8 @@
-package com.sistemas_distribuidos.pratica2.net_wheels_hub.controller;
+package com.sistemas_distribuidos.pratica2.net_wheels_hub.dto;
 
 import java.util.UUID;
 
-public class CompraCarroRequest {
+public class CompraCarroDTO {
     private UUID idCliente;
     private UUID idFuncionario;
 
