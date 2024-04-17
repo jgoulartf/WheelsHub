@@ -2,12 +2,12 @@
 
 <img src="https://i.imgur.com/oh4OTor.png"></img>
 
-> - **Instituição:** UFERSA
-> - **Período:** 2023.2
-> - **Disciplina:** Sistemas Distribuídos
-> - **Professor:** Prof. Dr. Paulo Henrique Lopes Silva
-> - **Propósito:** Este projeto foi desenvolvido para fins acadêmicos.
-> - By: João Goulart && Arthur Lennon
+> **Instituição:** UFERSA
+> **Período:** 2023.2
+> **Disciplina:** Sistemas Distribuídos
+> **Professor:** Prof. Dr. Paulo Henrique Lopes Silva
+> **Propósito:** Este projeto foi desenvolvido para fins acadêmicos.
+> By: João Goulart && Arthur Lennon
 
 Bem-vindo ao projeto WheelsHub, uma simulação de arquitetura de microserviços para gerenciamento de dados e autenticação. Este projeto é composto por quatro serviços principais: WheelsHubDataService0 e suas três réplicas: WheelsHubDataService1, WheelsHubDataService2, WheelsHubDataService3, WheelsHubAuthService, WheelsHubServiceRegistry e WheelsHubGateway. Aqui está um guia completo sobre como executar, configurar e entender cada componente deste sistema distribuído.
 
