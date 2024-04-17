@@ -58,7 +58,7 @@ A neon.tech oferece bases de dados gratuitas com um tempo total de computação 
 
 1. Registro na neon.tech: Se você ainda não tem uma conta na neon.tech, registre-se gratuitamente em neon.tech.
 
-2. Criação das Bases de Dados: Após fazer login na plataforma neon.tech, acesse o dashboard e crie uma nova base de dados para cada réplica do serviço WheelsHubDataService (DataService1, DataService2, DataService3).
+2. Criação das Bases de Dados: Após fazer login na plataforma neon.tech, acesse o dashboard e crie uma nova base de dados para o serviço principal WheelsHubDataService0 e cada uma das suas três réplicas (WheelsHubDataService1, WheelsHubDataService2, WheelsHubDataService3).
 
 3. Configuração das Credenciais de Acesso: Após a criação das bases de dados, obtenha as credenciais de acesso necessárias (como nome de usuário, senha, endereço do host e porta) para cada base de dados. Essas informações serão utilizadas na configuração dos serviços WheelsHubDataService.
 
