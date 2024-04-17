@@ -62,7 +62,7 @@ A neon.tech oferece bases de dados gratuitas com um tempo total de computação 
 
 3. Configuração das Credenciais de Acesso: Após a criação das bases de dados, obtenha as credenciais de acesso necessárias (como nome de usuário, senha, endereço do host e porta) para cada base de dados. Essas informações serão utilizadas na configuração dos serviços WheelsHubDataService.
 
-4. Configuração dos Serviços WheelsHubDataService: Abra os arquivos de configuração de cada serviço WheelsHubDataService (DataService0, DataService1, DataService2, DataService3) e insira as credenciais de acesso fornecidas pela neon.tech.
+4. Configuração dos Serviços WheelsHubDataService: Abra os arquivos de configuração de cada serviço(application.properties) WheelsHubDataService (DataService0, DataService1, DataService2, DataService3) e insira as credenciais de acesso fornecidas pela neon.tech.
 
 5. Teste de Conexão: Antes de iniciar os serviços, certifique-se de testar a conexão com cada base de dados para garantir que as configurações estejam corretas.
 
