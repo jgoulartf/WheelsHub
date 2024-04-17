@@ -49,6 +49,23 @@ O WheelsHubServiceRegistry é o servidor Eureka centralizado. Ele gerencia o reg
 
 O WheelsHubGateway atua como um gateway de API para os microserviços. Ele direciona as solicitações dos clientes para os serviços apropriados, além de lidar com tarefas como autenticação, autorização e monitoramento de tráfego. É o ponto de entrada para a arquitetura de microserviços. O serviço do gateway roda na porta 8084.
 
+### 5. Bases de dados
+
+As bases de dados utilizadas pelo projeto WheelsHub são fornecidas pela neon.tech, uma plataforma de computação em nuvem. Cada serviço do WheelsHub possui sua própria base de dados, com o serviço principal (WheelsHubDataService0) utilizando a base de dados principal e suas réplicas (WheelsHubDataService1, WheelsHubDataService2, WheelsHubDataService3) cada uma utilizando sua própria base de dados.
+
+#### Neon.tech Cloud Databases
+A neon.tech oferece bases de dados gratuitas com um tempo total de computação de 5 horas e um armazenamento de 1GB. Para configurar e acessar essas bases de dados, siga estas etapas:
+
+1. Registro na neon.tech: Se você ainda não tem uma conta na neon.tech, registre-se gratuitamente em neon.tech.
+
+2. Criação das Bases de Dados: Após fazer login na plataforma neon.tech, acesse o dashboard e crie uma nova base de dados para cada réplica do serviço WheelsHubDataService (DataService1, DataService2, DataService3).
+
+3. Configuração das Credenciais de Acesso: Após a criação das bases de dados, obtenha as credenciais de acesso necessárias (como nome de usuário, senha, endereço do host e porta) para cada base de dados. Essas informações serão utilizadas na configuração dos serviços WheelsHubDataService.
+
+4. Configuração dos Serviços WheelsHubDataService: Abra os arquivos de configuração de cada serviço WheelsHubDataService (DataService0, DataService1, DataService2, DataService3) e insira as credenciais de acesso fornecidas pela neon.tech.
+
+5. Teste de Conexão: Antes de iniciar os serviços, certifique-se de testar a conexão com cada base de dados para garantir que as configurações estejam corretas.
+
 ## Configuração e Execução
 
 Para configurar e executar o WheelsHub, siga estas etapas:
